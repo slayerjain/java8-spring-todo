@@ -1,0 +1,38 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/todos/id
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-07-11T21:55:26.493625447+05:30
+    resp:
+        status_code: 400
+        header:
+            Content-Type: application/json
+            Date: Thu, 11 Jul 2024 16:25:26 GMT
+        body: '{"timestamp":"2024-07-11T16:25:26.507+00:00","status":400,"error":"Bad Request","message":"","path":"/api/todos/id"}'
+        status_message: Bad Request
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2024-07-11T21:55:29.511185831+05:30
+    objects: []
+    assertions:
+        noise:
+            body.timestamp: []
+            header.Date: []
+    created: 1720715129
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/api/todos/id \
+      --header 'Host: localhost:8080' \
+      --header 'User-Agent: curl/7.88.1' \
+      --header 'Accept: */*' \

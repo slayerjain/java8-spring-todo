@@ -1,0 +1,247 @@
+version: api.keploy.io/v1beta1
+name: test-set-0-report
+status: PASSED
+success: 3
+failure: 0
+total: 3
+tests:
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1720715316
+      completed: 1720715316
+      test_case_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0
+      mock_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0/mocks
+      test_case_id: test-1
+      req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/todos
+        header:
+            Accept: '*/*'
+            Content-Length: "160"
+            Content-Type: application/json
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: |-
+            {
+                    "title": "Learn Spring Boot",
+                    "description": "Read the Spring Boot documentation and write some sample code",
+                    "completed": false
+                }
+        timestamp: 2024-07-11T21:55:18.281969912+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Thu, 11 Jul 2024 16:28:36 GMT
+        body: '{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:25:18 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:28:36 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}'
+              actual: '{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1720715316
+      completed: 1720715316
+      test_case_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0
+      mock_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0/mocks
+      test_case_id: test-2
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/todos
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-07-11T21:55:22.045780744+05:30
+      resp:
+        status_code: 200
+        header:
+            Content-Type: application/json
+            Date: Thu, 11 Jul 2024 16:28:36 GMT
+        body: '[{"id":2,"title":"Complete Homework","description":"Finish the math and science homework","completed":false},{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}]'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:25:22 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:28:36 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '[{"id":2,"title":"Complete Homework","description":"Finish the math and science homework","completed":false},{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}]'
+              actual: '[{"id":2,"title":"Complete Homework","description":"Finish the math and science homework","completed":false},{"id":3,"title":"Learn Spring Boot","description":"Read the Spring Boot documentation and write some sample code","completed":false}]'
+        dep_result: []
+    - kind: Http
+      name: test-set-0
+      status: PASSED
+      started: 1720715316
+      completed: 1720715316
+      test_case_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0
+      mock_path: /Users/shubham/projects/keploy/misc/todo-spring-app/keploy/test-set-0/mocks
+      test_case_id: test-3
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/api/todos/id
+        header:
+            Accept: '*/*'
+            Host: localhost:8080
+            User-Agent: curl/7.88.1
+        body: ""
+        timestamp: 2024-07-11T21:55:26.493625447+05:30
+      resp:
+        status_code: 400
+        header:
+            Content-Type: application/json
+            Date: Thu, 11 Jul 2024 16:28:36 GMT
+        body: '{"timestamp":"2024-07-11T16:28:36.560+00:00","status":400,"error":"Bad Request","message":"","path":"/api/todos/id"}'
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        body.timestamp: []
+        header.Date: []
+      normalized_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isnormalized: false
+      delete_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdeleted: false
+      ignored_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isignored: false
+      noised_data:
+        editedby: ""
+        editedat: 0001-01-01T00:00:00Z
+        isdenoised: false
+      result:
+        status_code:
+            normal: true
+            expected: 400
+            actual: 400
+        headers_result:
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - application/json
+              actual:
+                key: Content-Type
+                value:
+                    - application/json
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:25:26 GMT
+              actual:
+                key: Date
+                value:
+                    - Thu, 11 Jul 2024 16:28:36 GMT
+        body_result:
+            - normal: true
+              type: JSON
+              expected: '{"timestamp":"2024-07-11T16:25:26.507+00:00","status":400,"error":"Bad Request","message":"","path":"/api/todos/id"}'
+              actual: '{"timestamp":"2024-07-11T16:28:36.560+00:00","status":400,"error":"Bad Request","message":"","path":"/api/todos/id"}'
+        dep_result: []
+test_set: test-set-0
